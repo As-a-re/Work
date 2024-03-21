@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+<style>
+p {
+    font-size: 25px;
+    color: gold;
+}
+.row {
+display: flex;
+background-color: #50DDCD;
+height: 450px;
+}
+.column {
+flex: 40%;
+padding: 45px;
+}
+body {
+    background-image: url('images4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.par {
+    display: flex;
+}
+.item {
+     padding: 0px;
+     background-color: gold;
+     height: 50px;
+}
+.menu {
+    position:relative;
+    width:280px;
+    height:280ox;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.menu .toggle {
+    position:relative;
+    width:60px;
+    height:60px;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#333;
+    transition:1.25s;
+    font-size:10px;
+    cursor:pointer;
+    border-radius:50%;
+    display:flex;
+}
+.menu.active .toggle {
+    transform:rotate(360deg);
+    box-shadow:0 0 0 2px #333;
+}
+.mySlides {
+    display: none;
+    }
+.slideshow-container {
+  max-width: 1210px;
+  position: relative;
+  margin: auto;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --clr: #222327;
+}
+.navigation {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: gold;
+}
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: var(--clr);
+}
+.navigation ul li.active a .icon {
+  transform: translateY(-32px);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: tomato;
+  border-radius: 50%;
+  border: 6px solid var(--clr);
+  transition: 0.5s;
+  background-color: #50DDCD;
+}
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 0 var(--clr);
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 0 var(--clr);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px} 
+  }
+  * {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  text-align: left;
+}
+
+.flex-item-left {
+  padding: 5px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  padding: 5px;
+  flex: 50%;
+  margin-left: 85px;
+}
+
+.responsive {
+  max-width: 120%;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<img src="file2.jpg" alt="image" style="width:100%; height:100px;"> 
+<br> 
+<div class="navigation">
+  <ul>
+    <li class="list active">
+      <a href="#">
+        <span class="icon">
+          <ion-icon name="home-outline"></ion-icon>
+        </span>
+        <span class="text">HOME</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#">
+        <span class="icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </span>
+        <span class="text">ABOUT</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#">
+        <span class="icon">
+          <ion-icon name="image-outline"></ion-icon>
+        </span>
+        <span class="text">EVENTS</span>
+      </a>
+    </li>
+    <li class="list">
+      <a href="#">
+        <span class="icon">
+          <ion-icon name="calendar-number-outline"></ion-icon>
+        </span>
+        <span class="text">SCHEDULE</span>
+      </a>
+    </li>
+    <div class="indicator"></div>
+  </ul>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+<br> <br> <br>
+<h1 style="color: white;">
+WELCOME TO THE HILLTOP CHURCH OF CHRIST
+</h1>
+<br> <br>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="im.jpg" alt= "image" style="width: 100%; height: 400px;">
+</div>
+<div class="mySlides fade">
+  <img src="images1.jpg" alt= "image" style="width: 100%; height: 400px;">
+</div>
+<div class="mySlides fade">
+  <img src="img.jpg" alt= "image" style="width: 100%; height: 400px;">
+</div>
+</div>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); 
+}
+const list = document.querySelectorAll(".list");
+
+function activeLink() {
+  list.forEach((item) => item.classList.remove("active"));
+  this.classList.add("active");
+}
+list.forEach((item) => item.addEventListener("click", activeLink));
+</script>
+<br> <br> <br> <br>
+<p>
+HILLTOP CHURCH OF CHRIST is a vibrant and inclusive congregation dedicated to spreading the message of God's love through our actions, words, and deeds. Our mission is to provide a welcoming sanctuary for all seeking spiritual growth and meaningful connections.
+</p>
+<p>
+We embrace a community of faith, hope, and love. 
+</p>
+<p>
+Join us as we gather both online and in person to worship, learn, and grow together in the spirit of Christ's love.
+</p>
+<br> <br>
+<div class="flex-container">
+    <div class="flex-item-left">
+<img src="file3.jpg" alt="image" class="responsive" width="600" height="400">
+    </div>
+    <div class="flex-item-right">
+    
+    <h2> Our Services </h2>
+<p>
+Join us for our uplifting Sunday services filled with prayer, music, and inspiring messages. 
+</p>
+<p>
+Whether you are a longtime member or a first-time visitor, there is a place for you in our worship community.        
+</p>
+<br> <br>
+<h2> Ministries </h2>
+<p>
+Explore our diverse ministries that cater to various age groups, interests, and needs. 
+</p>
+<p>
+From youth programs to community outreach initiatives, there are opportunities for everyone to get involved and make a difference.
+</p>
+    </div>
+</div>
+<br> <br> <br> <br> <br> <br> <br> <br>
+<div class="row">
+   <div class="column">
+   <p style="color:white;">
+   <a href="" style="color:white;">ABOUT</a>
+   <br> <br>
+   <a href="" style="color:white;">HOME</a>
+  <br> <br>
+   <a href="" style="color:white;">EVENTS</a>
+   <br> <br>
+   <a href="" style="color:white;">SCHEDULE</a>
+   </p>
+   </div>   
+   <div class="column">
+   <br> <br>
+    <label for="email">Enter your email:</label>
+   <input type="email">
+    <input type="submit"> 
+   <br> <br> <br>
+   <a href="" style="font-size:25px; color:white;">www.hilltopchurchofchrist.com</a>
+   <br> <br> <br>
+   </div>
+</div>
+</body>
+</html>
